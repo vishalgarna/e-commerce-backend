@@ -50,3 +50,27 @@ exports.createCategory = (req, res, next) => {
     })
 
 }
+
+exports.AllCategory = (req, res, next) => {
+
+    const params = {
+        page: parseInt(req.query.page),
+        pagesize: parseInt(req.query.pagesize)
+    }
+
+    categgoriesservices.getCategories(params, (err, response) => {
+
+        if (err) {
+            next(err);
+        }
+
+        else {
+            res.status(200).send({
+                message: 'Success',
+                data: response
+            })
+        }
+
+    });
+
+}

@@ -1,6 +1,8 @@
 // db require
 require('../config/db.config')
 
+const { countDocuments } = require('moongose/models/user_model')
+const categorymodel = require('../models/categoriesmodel')
 // categorieschema file uploading
 const categoriesSchema = require('../models/categoriesmodel')
 
@@ -31,18 +33,41 @@ const AddCategories = async (params, callback) => {
 
 
 //this fun rturn all the categories 
-
 async function getCategories(params, callback) {
 
     const page = params.page || process.env.PAGE
     const pagesize = params.pagesize || process.env.PAGESIZE
 
+    // find total docs in db
+    const totalCatDb = await categorymodel.countDocuments;
+    // find how many page are created total cat
+    const totalpage = Math.ceil(totalCatDb / pagesize)
 
+    if (page > totalpage) {
+        return callback({
+            message: 'Page Not Found'
+        })
+    }
+    else {
+        try {
 
+            const response = await categorymodel.find()
+                .skip((page - 1) - pagesize)
+                .limit(pagesize);
 
+            return callback(null, response);
 
+        } catch (error) {
+
+            return callback({
+                message: error
+            })
+        }
+
+    }
 }
 
 module.exports = {
     AddCategories
+    , getCategories
 }

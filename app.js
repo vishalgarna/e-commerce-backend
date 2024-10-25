@@ -12,6 +12,9 @@ const _publicpath = path.join(__dirname, 'views');
 app.use(express.static(_publicpath));
 app.use(router);
 
+// ya ye hum bta rahe ki images static 
+app.use('/upload/categories', express.static('uploads/categories'));
+
 // Your routes here...
 app.get('/', (req, res) => {
     res.send('Hello World!');
