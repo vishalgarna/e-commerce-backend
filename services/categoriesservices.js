@@ -30,6 +30,18 @@ const AddCategories = async (params, callback) => {
 }
 
 
+//this fun rturn all the categories 
+
+async function getCategories(params, callback) {
+
+    const page = params.page || process.env.PAGE
+    const pagesize = params.pagesize || process.env.PAGESIZE
+
+
+
+
+
+}
 
 module.exports = {
     AddCategories
