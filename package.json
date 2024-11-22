@@ -1,0 +1,25 @@
+{
+    "name": "e_commerce_backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "async": "^3.2.6",
+        "bcrypt": "^5.1.1",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.20.3",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "jsonwebtoken": "^9.0.2",
+        "moongose": "^1.0.0",
+        "multer": "^1.4.5-lts.1",
+        "nodemon": "^3.1.7",
+        "stripe": "^17.3.1"
+    }
+}
