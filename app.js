@@ -9,7 +9,7 @@ const _publicpath = path.join(__dirname, 'views');
 
 
 // static xontent use in app ;
-app.use(express.static(_publicpath));
+
 
 
 app.use(express.json())
@@ -25,6 +25,9 @@ app.use(router);
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
+
+
+app.use(express.static(_publicpath));
 
 // Catch-all route to handle 404 errors
 app.all('*', (req, res, next) => {
