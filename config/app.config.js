@@ -5,6 +5,10 @@ const STRIPE_CONFIG = {
 
 }
 
+
+
+
+DB_URL = "mongodb+srv://vishalgarna:vishalgarna@1@vishal.l24eo.mongodb.net/E-comerce"
 module.exports = {
     STRIPE_CONFIG
 }

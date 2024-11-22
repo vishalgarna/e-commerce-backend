@@ -1,4 +1,4 @@
-require('../config/db.config')
+require('../db.config')
 // to define structur of categoriesmodel
 const mongoose = require('mongoose');
 

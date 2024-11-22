@@ -1,5 +1,5 @@
 // db require
-require('../config/db.config')
+require('../db.config')
 const mongoose = require('mongoose');
 
 

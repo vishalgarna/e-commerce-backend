@@ -1,4 +1,4 @@
-require('../config/db.config');
+require('../db.config');
 const mongoose = require('mongoose');
 
 // to define structure of Productmodel
