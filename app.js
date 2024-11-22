@@ -23,7 +23,7 @@ app.use('/uploads/slider', express.static('uploads/slider/'))
 app.use(router);
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World! Aapka Swagat hai ji Vishal ki Duniya me');
 });
 
 

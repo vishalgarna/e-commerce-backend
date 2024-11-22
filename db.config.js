@@ -4,7 +4,7 @@ require('dotenv').config();
 
 // % 401 iska mtlb @ kyukimg mongdb special characte aloowed nahi hai 
 
-url = process.env.DB_URL;
+url ="mongodb+srv://vishalgarna:vishalgarna%401@vishal.l24eo.mongodb.net/E-comerce"
 
 
 
